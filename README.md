@@ -1,35 +1,76 @@
 # Software Development
 Resumo do livro Software Development, Design and Coding, de John F. Dooley.
 
-## Prefácio
-Este livro foi projetado para ser um manual para profissionais, para orientá-los em uma perspectiva pessoal do desenvolvimento de software: o que significa receber um problema e criar um programa para resolvê-lo do começo ao fim. Este livro te mostrará como visualizar, projetar, implementar e testar softwares de qualquer tamanho, tanto sozinho quanto em um time.
+## Fundamentos do Gerenciamento de Projeto
+Tarefas envolvidas:
+1. Planejamento
+2. Estimativa e definição do cronograma
+3. Gerenciamento de recursos
+4. Supervisão
+5. Revisão do projeto e apresentação
+6. Retrospectiva
 
-### 3 pilares
-* Design: quais padrões utilizar? é diferente projetar um pequeno sistema de um grande? 
-* Código: padrões de código, debbug, testes unitários, modularidade. Código legível e como Revisar Código de outros com um olhar de melhoria.
-* Engenharia de Software: aplicação de princípios de engenharia, que significa seguir um processo definido. Como funciona um projeto de desenvolvimento de software e quais fases estão no projeto. Todo trabalho de engenharia tem suas bases na aplicação da ciência e da matemática a problemas do mundo real, assim também no mundo do Desenvolvimento de Software. Metodologias Ágeis.
+Gerente de projeto (tradicional): responsável pelo escopo, custo, estimativa, cronograma, qualidade, pessoal, comunicação, risco etc.
+Projeto ágil: toda a equipe é responsável pelo gerenciamento do projeto.
+> Obs: se houver um gerente de projeto, ele garantirá acesso aos recursos necessários, à aderência aos valores e princípios ágeis, facilitará a comunicação e blindará a equipe de interferências externas. Ele não gerenciará o dia-a-dia das operações da equipe. Apenas garantirá que não haja atraso nas decisões-soluções do gerenciamento.
 
-> Recomendação de leitura: The End off Software Engineering and the Start of Economic-Cooperative Gaming (Alistair Cockburn)
+### Planejamento do projeto
+O planejamento é eterno porque o desenvolvimento está sempre em fluxo constante. 
+> Um planejamento de projeto (plan-driven model) é um documento, escrito pelo gerente de projeto, aprovado e assinado pela equipe de desenvolvimento e o gerente superior. É um contrato sobre o que a equipe vai fazer e como vai fazer. Como o projeto será gerenciado. Consiste nas seguintes etapas:
+1. Introdução e explicação do projeto
+2. Organização da equipe
+3. Análise de Risco
+4. Requisitos de hardware, software e recursos humanos
+5. Lista de tarefas, tamanho e esforços estimados
+6. Cronograma de projeto
+7. Monitoramento do projeto e mecanismos de relatório, conhecidos coletivamente como Supervisão de projeto
 
-### Software Enginnering x Software Design
-Software Enginnering tende a focar mais em processo e gerenciamento de projeto. Design de Software foca na escrita de código real.
+Obs: projetos baseados em planejamento farão uso de todas as etapas, enquanto projetos ágeis usarão apenas algumas.
+Um planejamento de projeto é muito útil para detalhar como você fará as coisas mas... é estático. Seu gerente superior pensará que o projeto será executado exatamente como definido no planejamento.
 
-## Introdução
-Desenvolvimento de Software é o processo de obter um conjunto de requisitos a partir de um usuário (uma definição de um problema), analisá-lo, projetar uma solução para ele e então implementar a solução no computador.
-Programar é parte da implementação, ou parte do projeto e implementação do desenvolvimento de software, mas não é tudo.
-Engenharia de Software inclui o desenvolvimento de software, além de Gerenciamento do Projeto, Configuração, Estimativa e Cronograma, Gerenciamento de Pessoas etc.
+Um planejamento de projeto ágil:
+1. É baseado em features (construído em torno da ideia de colocar código rodando em produção rapidamente)
+2. É organizado em iterações
+3. É multi-camada (sabe-se que as coisas não estão definidas completamente desde o início)
+4. É propriedade da equipe, não do gerente de projeto
 
-Aprender como desenvolver software correta, eficiente e belamente é difícil. É uma habilidade que você tem que escolher e praticar...muito! Trabalhe em problemas interessantes e desafiadores, algo que você nunca tenha feito e nem tenha ideia de como resolver.
-Existem várias maneiras de aprender o desenvolvimento de software mas todas se baseiam em: Leitura, Escrita e Pensar Profundamente sobre solução de problemas.
+### Organização do projeto:
+Contém três elementos principais:
+1. Como você vai organizar a equipe
+2. Qual modelo o projeto irá usar
+3. Como o projeto vai ser executado no dia-a-dia
 
-Apesar do fato do desenvolvimento de software ser apenas uma parte da Engenharia de Software, ele é o coração de todo o projeto. Para fazer bem o desenvolvimento de software, você precisa do seguinte:
-* Um time pequeno e bem integrado
-* Boa comunicação entre os membros da equipe
-* Boa comunicação entre o time e os clientes
-* Um processo que todos participam
-* A capacidade de ser flexível em relação ao processo
-* Um planejamento em que todos participam
-* Saber onde você está em cada momento
-* Ser corajoso o suficiente para dizer: "Ei, nós estamos ficando para trás!"
-* As ferramentas certas e as práticas certas para o projeto
-* Perceber que você não sabe tudo que precisa saber no começo do projeto
+A metodologia ágil simplifica esses três elementos porque as equipes ágeis são auto-organizadas, elas são pequenas e uma de suas principais ideias é o compartilhamento de responsabilidades. Os desenvolvedores ágeis não se segregam a partir das partes de código em que estão trabalhando ou baseado em suas habilidades. Eles compartilham o código, o teste e a expertise. Estão constantemente aprendendo e melhorando suas habilidades. 
+> Não importa qual metodologia (XP, Scrum, Crystal, feature-driven etc), os projetos ágeis são iterativos, com ciclos de desenvolvimento curtos e produzem códigos funcionais ao final de cada ciclo. A maioria trabalhará com reuniões diárias, pelo menos integrações diárias e algum tipo de compartilhamento de programação, como pair programming. Os desenvolvedores passam a maior parte do tempo escrevendo e rodando testes unitários.
+
+### Análise de Risco
+O que pode dar errado? Qual é a pior coisa que pode acontecer? O que será feito se tal coisa acontecer?
+Variáveis a observar:
+  - Deslize no cronograma: há reuniões diárias em projetos ágeis, o que pode evitar que esse tipo de atraso ocorra, visto que pode ser notado imediatamente e as ações devidas serem imediatamente tomadas.
+  - Taxa excessiva de defeitos: de um ponto de vista ágil, o melhor a se fazer é parar, olhar em volta e encontrar a causa raíz dos defeitos antes de adicionar novas funcionalidades. 
+  - Má compreensão dos requisitos: clientes vivem no mundo do domínio da aplicação, enquanto os desenvolvedores entendem como o produto irá funcionar de um ponto de vista técnico. Para evitar desentendimento, os clientes devem estar o mais próximo possível da equipe de desenvolvimento.
+  - Mistura de requisitos: em processo ágil, a equipe de desenvolvimento mantém o controle da lista de prioridades (Product Backlog no Scrum) e apenas ajusta essa lista após a Sprint (Scrum) ou após uma iteração (XP).
+  - Sobrecarga: dê trabalho interessante aos desenvolvedores; um ambiente prazeroso; controle sobre seus cronogramas. A melhor maneira de mitigar a sobrecarga é espalhar o conhecimento do projeto entre todos os membros da equipe. Princípios como Responsabilidade de código compartilhada e técnicas como Pair Programming funcionam nesse sentido.
+  
+Sugestão de leitura: Peopleware, de Tom DeMarco.
+
+> Uma vez que você tenha listado os riscos do projeto, você precisa endereçá-los e pensar sobre duas coisas: como evitá-los e como mitigá-los.
+Evitar: defina um cronograma flexível, faça revisões de código, congele requisitos cedo, entregue com frequência, faça pair programming etc.
+Mitigar (o que fazer se o pior cenário acontecer): remova as features da entrega, pare o trabalho de novas features e faça uma caçada ao bug, negocie novas features para entregas futuras e por aí vai.
+
+### Requisitos de recursos
+Quantas pessoas serão necessárias? Quantos computadores? Quais softwares serão usados no desenvolvimento? Todo mundo está treinado? 
+> Você precisará de um sistema de gerenciamento de configuração e uma máquina isolada, não importa que tipo de modelo você está usando.
+>
+> Questões sobre tamanho da equipe, data de início e fases do projeto podem ser respondidas após as estimativas de esforços e cronograma.
+
+### Estimativas de tarefas
+
+
+
+
+
+
+
+## Referência bibliográfica:
+DOOLEY, John F., Software Development, Design and Coding, Apress, 2017, 2nd Edition.
