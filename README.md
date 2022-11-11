@@ -1,35 +1,90 @@
 # Software Development
 Resumo do livro Software Development, Design and Coding, de John F. Dooley.
 
-## Prefácio
-Este livro foi projetado para ser um manual para profissionais, para orientá-los em uma perspectiva pessoal do desenvolvimento de software: o que significa receber um problema e criar um programa para resolvê-lo do começo ao fim. Este livro te mostrará como visualizar, projetar, implementar e testar softwares de qualquer tamanho, tanto sozinho quanto em um time.
+## Software Process Models
+Não importa se grande ou pequeno, quantas pessoas trabalham no projeto, todos os programas passam pelas mesmas etapas:
+1. Concepção
+2. Levantamento de Requisitos / Exploração / Modelagem
+3. Projeto
+4. Codificação e debug
+5. Teste
+6. Entrega
+7. Manutenção / Evolução do Software
+8. Aposentadoria
 
-### 3 pilares
-* Design: quais padrões utilizar? é diferente projetar um pequeno sistema de um grande? 
-* Código: padrões de código, debbug, testes unitários, modularidade. Código legível e como Revisar Código de outros com um olhar de melhoria.
-* Engenharia de Software: aplicação de princípios de engenharia, que significa seguir um processo definido. Como funciona um projeto de desenvolvimento de software e quais fases estão no projeto. Todo trabalho de engenharia tem suas bases na aplicação da ciência e da matemática a problemas do mundo real, assim também no mundo do Desenvolvimento de Software. Metodologias Ágeis.
+Todo processo de desenvolvimento é uma variação de um dos dois tipos fundamentais (2 classes de modelos de gerenciamento de projeto): 
+* Fazer o ciclo completo (pelo menos de 2 a 7) antes de iniciar uma nova versão do produto. (Tradicional plan-driven model)
+* Fazer um ciclo parcial (geralmente de 3 a 5) e iterar por essas etapas várias vezes antes de prosseguir com a entrega. (modelo ágil)
 
-> Recomendação de leitura: The End off Software Engineering and the Start of Economic-Cooperative Gaming (Alistair Cockburn)
+1. Modelo orientado a planejamento: 
+  - Estrito no sentido de etapas do processo
+  - Fases mais claramente definidas
+  - mais requisitos para cumprir em uma etapa
+  - mais documentação em cada etapa
+  - tende a funcionar melhor em contratos longos para novos softwares com entregas bem-definidas
+  
+2. Modelo ágil:
+  - Inerentemente incremental: a ideia é de que entregas frequentes produzem um sistema mais robusto do que aqueles maiores e menos frequentes.
+  - Tende a ter menos documentação
+  - Código é o que se produz, então os esforços do desenvolvedor devem focar nisso.
+  
+Todo projeto deve escolher o que melhor funcione para sua aplicação, baseado em: 
+  - domínio da aplicação
+  - tamanho do projeto
+  - experiência da equipe 
+  - tempo de vida do projeto
+  
+4 fatores (variáveis) que todo projeto de desenvolvimento de software tem em comum:
+  * Custo: o mais restritivo --> tamanho da equipe, tipos de ferramentas disponíveis;
+  * Tempo: cronograma de entrega --> em geral, imposto a você;
+  * Qualidade: número e gravidade de defeitos que você está lidando para entregar o software --> sacrificar a qualidade reduzindo o cronograma de entrega gerará mais tempo para corrigir as novas entregas e afetará sua credibilidade bastante;
+  * Features (escopo): a variável mais importante do ponto de vista do cliente. A variável sobre a qual você como desenvolvedor tem maior controle.
+  
+### Um modelo que não é um modelo: Programar e Corrigir (Code and Fix Model)
+Nesse modelo não há requisitos formais, nenhuma documentação exigida, nenhuma garantia de qualidade, nenhum teste formal. Gasta-se o mínimo de tempo no entendimento do problema e então se começa a programar:
+1. Compile seu código e veja se funciona.
+2. Se não, corrija o primeiro problema que encontrar e tente novamente.
+3. Continue esse ciclo de compilar - rodar - corrigir até o programa fazer o que você quer, sem erros fatais e então o entregue.
 
-### Software Enginnering x Software Design
-Software Enginnering tende a focar mais em processo e gerenciamento de projeto. Design de Software foca na escrita de código real.
+Essa é uma forma horrível de fazer protótipos rápidos e sujos. É útil para validar decisões de arquitetura e para mostrar uma versão rápida de um projeto de UI (prova de conceito). Para qualquer outro tipo de sistema, é um modelo muito perigoso de se trabalhar.
 
-## Introdução
-Desenvolvimento de Software é o processo de obter um conjunto de requisitos a partir de um usuário (uma definição de um problema), analisá-lo, projetar uma solução para ele e então implementar a solução no computador.
-Programar é parte da implementação, ou parte do projeto e implementação do desenvolvimento de software, mas não é tudo.
-Engenharia de Software inclui o desenvolvimento de software, além de Gerenciamento do Projeto, Configuração, Estimativa e Cronograma, Gerenciamento de Pessoas etc.
+### Modelo Waterfall
+O primeiro e mais tradicional modelo orientado a planejamento. Contém todas as fases do ciclo de vida padrão. Funciona muito bem com análise e levantamento de requisitos, projeto arquitetural, detalhes de projeto, codificação, debug, teste e integração de sistemas, entrega e manutenção. Requer uma documentação detalhada em cada etapa. Encerra cada fase do processo.
 
-Aprender como desenvolver software correta, eficiente e belamente é difícil. É uma habilidade que você tem que escolher e praticar...muito! Trabalhe em problemas interessantes e desafiadores, algo que você nunca tenha feito e nem tenha ideia de como resolver.
-Existem várias maneiras de aprender o desenvolvimento de software mas todas se baseiam em: Leitura, Escrita e Pensar Profundamente sobre solução de problemas.
+![image](https://user-images.githubusercontent.com/39681960/201400082-fee5b11d-98d6-42b7-8211-dd0fc770a1c9.png)
 
-Apesar do fato do desenvolvimento de software ser apenas uma parte da Engenharia de Software, ele é o coração de todo o projeto. Para fazer bem o desenvolvimento de software, você precisa do seguinte:
-* Um time pequeno e bem integrado
-* Boa comunicação entre os membros da equipe
-* Boa comunicação entre o time e os clientes
-* Um processo que todos participam
-* A capacidade de ser flexível em relação ao processo
-* Um planejamento em que todos participam
-* Saber onde você está em cada momento
-* Ser corajoso o suficiente para dizer: "Ei, nós estamos ficando para trás!"
-* As ferramentas certas e as práticas certas para o projeto
-* Perceber que você não sabe tudo que precisa saber no começo do projeto
+2 problemas fundamentais com o modelo Waterfall: 
+  - geralmente você precisa terminar a fase N para iniciar a fase N + 1: você precisa destrinchar todos os requisitos antes de iniciar o projeto arquitetural, por exemplo.
+  - fundamentalmente baseado em uma mentalidade de linha de montagem: não há como voltar e retrabalhar seu projeto se você encontrar um problema durante a implementação.
+
+Obs: na teoria é um modelo muito bom. Ele isola as diferentes fases do ciclo de vida e te força a pensar sobre tudo o que é necessário saber antes de seguir em frente. Boa estratégia para projetos longos e para equipes inexperientes inseridas em um projeto bem definido.
+
+### Modelos Iterativos
+O mais tradicional: Prototipação Evolutiva --> prioriza os requisitos recebidos, produzindo sucessivas versões de ricas features do produto. Cada versão é refinada a partir do feedback do cliente e dos testes de integração do sistema. Muito usado em ambientes dinâmicos ou com requisitos ambíguos, com baixo entendimento do domínio da aplicação. Evoluiu para o moderno processo de desenvolvimento ágil.
+
+![image](https://user-images.githubusercontent.com/39681960/201403753-c9124936-d5c8-4a49-a1c1-54d4bacf97d6.png)
+
+Nesse modelo se reconhece a dificuldade de se obter todos os requisitos de um projeto desde o começo, que são levantados juntamente com o feedback feito pelos clientes a partir das features iniciais entregues. Provê visibilidade de progresso tanto para o cliente quanto para o gerente de projeto, facilitando a priorização de requisitos ao munir os usuários finais e clientes.
+
+Pontos negativo: 
+  - pode ser conduzido a cronogramas irreais, superfaturamento e superestimar as expectativas de progresso. 
+  - o projeto envolve trabalho extra uma vez que os requisitos mudem e há a possibilidade de um mal projeto, que geraria muito retrabalho e uma corrente de descumprimento de cronograma e crescente dificuldade de corrigir os bugs pós-entrega.
+  
+Obs: Funciona bem para equipes pequenas e muito experientes, que estejam entrosadas.
+  
+### Risco
+É o problema mais básico e pode se manifestar de diversas maneiras: deslize no cronograma, cancelamento do projeto, aumento na taxa de defeitos, má compreensão dos problemas de negócio e esgotamento da equipe. 
+A metodologia ágil busca minimizar os riscos controlando as quatro variáveis do desenvolvimento de software, dando maior controle aos desenvolvedores sobre essas variáveis mas, especialmente, sobre o controle do escopo do projeto. 
+
+### Metodologia Ágil
+
+
+
+
+
+
+
+
+
+
+
