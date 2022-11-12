@@ -80,7 +80,8 @@ A metodologia ágil busca minimizar os riscos controlando as quatro variáveis d
 
 
 
-
+## Referência bibliográfica:
+DOOLEY, John F., Software Development, Design and Coding, Apress, 2017, 2nd Edition.
 
 
 
