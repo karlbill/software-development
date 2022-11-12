@@ -1,35 +1,61 @@
 # Software Development
 Resumo do livro Software Development, Design and Coding, de John F. Dooley.
 
-## Prefácio
-Este livro foi projetado para ser um manual para profissionais, para orientá-los em uma perspectiva pessoal do desenvolvimento de software: o que significa receber um problema e criar um programa para resolvê-lo do começo ao fim. Este livro te mostrará como visualizar, projetar, implementar e testar softwares de qualquer tamanho, tanto sozinho quanto em um time.
+## Requisitos
+"A função mais importante que um construtor de software executa para o cliente é a extração iterativa e refinamento dos requisitos do produto."
+(Fred Brooks)
 
-### 3 pilares
-* Design: quais padrões utilizar? é diferente projetar um pequeno sistema de um grande? 
-* Código: padrões de código, debbug, testes unitários, modularidade. Código legível e como Revisar Código de outros com um olhar de melhoria.
-* Engenharia de Software: aplicação de princípios de engenharia, que significa seguir um processo definido. Como funciona um projeto de desenvolvimento de software e quais fases estão no projeto. Todo trabalho de engenharia tem suas bases na aplicação da ciência e da matemática a problemas do mundo real, assim também no mundo do Desenvolvimento de Software. Metodologias Ágeis.
+Antes de começar a programar, você precisa saber o que você vai construir. Requisitos são: uma lista de coisas que você tem que implementar de modo a criar seu maravilhoso programa. Se você quiser ser um desenvolvedor produtivo, cometer menos erros e criar um bom e limpo projeto, você precisa de requisitos. E quanto mais detalhados, melhor.
 
-> Recomendação de leitura: The End off Software Engineering and the Start of Economic-Cooperative Gaming (Alistair Cockburn)
+Requisitos funcionais: a lista de features que os usuários verão e estarão aptos a usar quando eles rodarem seu programa. Em um processo orientado a planejamento, a saída das atividades de identificação dos requisitos é uma Especificação Funcional do que o sistema de software deveria fazer. Em um processo ágil, a saída é um conjunto de Histórias do Usuário que definem o Backlog do Produto.
 
-### Software Enginnering x Software Design
-Software Enginnering tende a focar mais em processo e gerenciamento de projeto. Design de Software foca na escrita de código real.
+4 tipos de requisitos:
+* Requisitos do usuário
+* Requisitos de domínio
+* Requisitos não-funcionais
+* Não-requisitos
 
-## Introdução
-Desenvolvimento de Software é o processo de obter um conjunto de requisitos a partir de um usuário (uma definição de um problema), analisá-lo, projetar uma solução para ele e então implementar a solução no computador.
-Programar é parte da implementação, ou parte do projeto e implementação do desenvolvimento de software, mas não é tudo.
-Engenharia de Software inclui o desenvolvimento de software, além de Gerenciamento do Projeto, Configuração, Estimativa e Cronograma, Gerenciamento de Pessoas etc.
+### Requisitos de Usuário
+Geralmente expresso em linguagem natural que descreva qualquer elemento de interação no programa. Ex: descrição de layouts de tela, caixas de diálogo e menus.
+> Expresse os requisitos de usuário como cenários e com uma descrição detalhada tela-a-tela. Utilize imagens o quanto quiser.
 
-Aprender como desenvolver software correta, eficiente e belamente é difícil. É uma habilidade que você tem que escolher e praticar...muito! Trabalhe em problemas interessantes e desafiadores, algo que você nunca tenha feito e nem tenha ideia de como resolver.
-Existem várias maneiras de aprender o desenvolvimento de software mas todas se baseiam em: Leitura, Escrita e Pensar Profundamente sobre solução de problemas.
+### Requisitos de Domínio
+São impostos a você pelo domínio da aplicação. Geralmente são considerados "camada intermediária", porque são o coração de uma aplicação, abaixo da interface com o usuário e acima do Sistema Operacional, da rede ou do banco de dados. 
+> Implementados como classes separadas e bibliotecas com suas próprias APIs.
 
-Apesar do fato do desenvolvimento de software ser apenas uma parte da Engenharia de Software, ele é o coração de todo o projeto. Para fazer bem o desenvolvimento de software, você precisa do seguinte:
-* Um time pequeno e bem integrado
-* Boa comunicação entre os membros da equipe
-* Boa comunicação entre o time e os clientes
-* Um processo que todos participam
-* A capacidade de ser flexível em relação ao processo
-* Um planejamento em que todos participam
-* Saber onde você está em cada momento
-* Ser corajoso o suficiente para dizer: "Ei, nós estamos ficando para trás!"
-* As ferramentas certas e as práticas certas para o projeto
-* Perceber que você não sabe tudo que precisa saber no começo do projeto
+### Requisitos não-funcionais
+São limitações nos serviços e funções do programa e também expectativas sobre a performance. Podem não ser visíveis ao usuário mas tem efeito sobre a experiência desses usuários (UX). Ex: uso de memória, privilégios de acesso, requisitos de segurança, tempo de resposta etc.
+
+### Não-requisitos
+O que não será feito no projeto. Na fase de requisitos, o mais importante a ser feito é *gerenciar as expectativas*. Você precisa dizer aos stakeholders de um projeto o que o programa irá e o que ele não irá fazer.
+
+## Levantamento de Requisitos em um projeto orientado a planejamento
+A Especificação Funcional descreve o que o programa irá fazer, completamente do ponto de vista do usuário: especifica telas, menus, diálogos... </br>
+Uma Especificação Técnica descreve detalhes da implementação interna do programa: estrutura de dados, algoritmos, modelos de dados, escolha de linguagens de programação etc.
+> A metodologia ágil também escreve Especificação Funcional: Histórias de usuário que mostram o que o programa fará. Isso é especificação.
+
+Obs: escreva o que o seu programa fará antes de começar a programar!
+
+Requisitos funcionais devem ser escritos em linguagem natural (Hipótese da Relatividade Linguística de Sapir-Whorf): a linguagem não apenas determina o que você diz, ela determina o que você consegue dizer (e pensar). A linguagem que você utiliza determina que tipo de pensamento você é capaz de ter.
+
+Recomendação de leitura: Notation as a tool of thought (Kenneth Iverson)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
