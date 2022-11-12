@@ -33,3 +33,7 @@ Apesar do fato do desenvolvimento de software ser apenas uma parte da Engenharia
 * Ser corajoso o suficiente para dizer: "Ei, nós estamos ficando para trás!"
 * As ferramentas certas e as práticas certas para o projeto
 * Perceber que você não sabe tudo que precisa saber no começo do projeto
+
+
+## Referência bibliográfica:
+DOOLEY, John F., Software Development, Design and Coding, Apress, 2017, 2nd Edition.
