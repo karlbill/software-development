@@ -65,6 +65,41 @@ Quantas pessoas serão necessárias? Quantos computadores? Quais softwares serã
 > Questões sobre tamanho da equipe, data de início e fases do projeto podem ser respondidas após as estimativas de esforços e cronograma.
 
 ### Estimativas de tarefas
+O clássico problema do ovo e da galinha: você não pode fazer uma estimativa até ter uma decomposto detalhadamente as features ou histórias de usuários em tarefas. Faça do design sua primeira prioridade uma vez que você tenha alguma ideia dos requisitos. 
+> Se você escolher uma lista pequena de requisitos de alta prioridade e então projetar uma solução para esse conjunto de features, então você pode fazer uma estimativa de esforço dessa iteração. Você precisa quebrar a feature em tarefas implementáveis antes que possa fazer uma estimativa de esforço.
+
+Você tem que partir seu trabalho em tarefas que não sejam maiores do que uma semana para serem concluídas. 
+> Nunca faça estimativas em qualquer unidade alé de pessoa-horas. Você será tentado a trabalhar comm pequenos incrementos de horas e você quebrará suas tarefas maiores em menores, a ponto de saber realmente como resolvê-la. O tamanho sempre deve vir primeiro. Tamanho pode se referir a muitas coisas: módulos funcionais, números de classes, de métodos, de objetos, ou **linhas de código não comentadas (KLOC)**.
+
+Técnicas para estimativa de esforço: COCOMO II, Function Point Analysis e Delphi method.
+> Mantra da estimativa: tamanho em primeiro lugar, depois estimativa de custo e esforço, só então o cronograma.
+
+Explicação para o método Delphi (rápido e relativamente eficiente): 
+1. reúna os três mais experientes desenvolvedores e dê a eles as tarefas detalhadas. 
+2. Peça a eles para te dar 3 números para cada tarefas: a menor, a maior e a quantidade normal de tempo que a tarefa deveria consumir, todas em pessoa-horas.
+3. Reúna os dados e faça a média (da melhor estimativa pelos melhores desenvolvedores). Utilize essa média como a estimativa de esforço oficial e comece a definir o cronograma.
+> Gerentes nunca devem fazer as estimativas de desenvolvimento, mesmo se tiver sido desenvolvedor no passado (a menos que esteja profundamente envolvido no processo de desenvolvimento).
+
+Pelas minhas experiências, a estimativa de esforço realizadas com toda a equipe, através de técnicas como Poker plan não são muito úteis. Em geral, os desenvolvedores menos experientes acabam seguindo os mais experientes, à medida que algumas tasks são estimadas e começa-se a se ter uma noção dos valores que cada desenvolvedor costuma escolher. Sempre fui muito crítico em relação ao Poker Plan, pela falta de personalidade das pessoas envolvidas no processo mas não conhecia uma estratégia melhor. Acredito que a resposta para minha crítica seja o método Delphi.
+
+### Cronograma de Projeto
+Uma vez tendo as estimativas de tempo para as tarefas da primeira iteração e tendo uma estimativa de recursos/pessoas necessárias, você pode criar o Cronograma. Muitas coisas precisam ser levadas em consideração:
+  - Verifique com os desenvolvedores as dependências entre as tarefas: algumas tarefas não podem ser iniciadas sem que outras sejam concluídas.
+  - Descubra qual é o seu ciclo de trabalho: realisticamente, de cada oito horas diárias, de duas a quatro horas são consumidas com outras coisas, então seu ciclo de trabalho pode ser reduzido a 50%. Pode variar baseado na cultura da empresa.
+  - Leve em consideração os fins de semana, férias, falta por doença, treinamento
+  - Você não pode enquadrar um desenvolvedor para trabalhar em duas tarefas ao mesmo tempo. 
+> Utilize um software de definição do cronograma. Para projetos pequenos, uma simples técnica de planilha pode ser o bastante (técnica de Joel Spolsky). </br>
+> Softwares para plan-driven projects: MS Project, Fast Track Scheduling, Basecamp, Merlin </br>
+> Softwares para projetos ágeis: Jira, Pivotal Tracker, Trello </br>
+> Em projetos ágeis, como Scrum, em que se utiliza tempos curtos para Sprints e você precisa conhecer as prioridades de cada História do Usuário no Backlog do Produto, e como elas se relacionam umas com as outras, e como você deve ter uma boa estimativa de quanto tempo cada tareffa levará, e você precisa rastrear o progresso do número de tarefas no Backlog da Sprint diariamente - ter um software que rastreie as dependências pode ser o diferencial entre cumprir a Sprint ou não.
+
+Exemplo de uma planilha de cronograma:
+
+![image](https://user-images.githubusercontent.com/39681960/201451948-22cfab3c-2898-4339-8571-d3192f1ebd93.png)
+
+Essa é uma estratégia útil para projetos menores com uma quantidade bem limitada de tarefas. Para que essa planilha funcione, as tarefas precisam ser granulares e pequenas em termos de esforço. Cada desenvolvedor deve ter uma planilha separada ou ser adicionada uma coluna com o nome do desenvolvedor, como na imagem acima. 
+> A coluna 9 da planilha é uma medida de Velocidade (termo da metodologia XP), definida como uma estimativa de esforço de uma tarefa, dividida pelo esforço atual (Estimativa original / Tempo real gasto). Se velocidade > 1, a estimativa foi superestimada; se abaixo, foi subestimada. Idealmente, deve ser igual a 1. </br>
+> Algumas ferramentas de gerenciamento de projeto permitem utilizar uma variável *magnitude*: dar uma pontuação para cada tarefa. O motivo para isso é dar uma ideia da precisão das estimativas realizadas e ser uma medida auxiliar para as próximas estimativas.
 
 
 
