@@ -2,7 +2,7 @@
 Resumo do livro Software Development, Design and Coding, de John F. Dooley.
 
 ## Arquitetura de Software
-"Noção dos elementos principais de um sistema, as peças que são difíceis de mudar. A fundação sobre a qual todo o resto deve ser construído." (Martin Fawler)
+"[...] noção dos elementos principais de um sistema, as peças que são difíceis de mudar. A fundação sobre a qual todo o resto deve ser construído." (Martin Fawler)
 
 Uma vez que se tenha definido o que se quer construir, agora passamos a pensar em COMO isso será construído. Existem dois níveis de Software Design:
 1. Detailed Design:
@@ -38,13 +38,22 @@ Os componentes computacionais são chamados Filtros (como transdutores que receb
   ![image](https://user-images.githubusercontent.com/39681960/201501449-071fa69e-d8ce-49ab-bbd6-37a38614e566.png)
     - Todas as características do padrão estão nesse exemplo: componentes computacionais independentes  que realizam uma transformação nos dados de entrada e se comunicam transmitindo os dados transformados em sua saída para a entrada do próximo componente.
     
+### O padrão arquitetural Orientado a Objetos
+Foco em apenas um padrão: MVC (Model-View-Controller) --> desenvolvido para mapear a tradicional função da maioria dos programas [ Input (Model) - Processing (Controller) - Output (View) ] para a área das Interfaces Gráficas (GUI).
 
+![image](https://user-images.githubusercontent.com/39681960/201502298-44331797-a2df-433d-8ac9-fa2964210f8c.png)
 
+1. Controller: interpreta as entradas do mouse e do teclado e mapeia essas entradas em comando a serem enviados ao Model ou à View.
+2. Model: gerencia os dados, responde a consultas sobre estado e muda o estado, se necessário. O Model conhece as regras.
+3. View (viewport): gerencia a área retangular da tela, apresentando os dados ao usuário através da combinação entre gráficos e textos. Se comunica de volta com o Model ou o Controller para reportar o status.
 
-
-
-
-
+Fluxo de um programa MVC:
+1. O usuário interage com a interface (view)
+2. O Controller lida com esse evento de entrada, sem ter conhecimento direto da View.
+> A interface é apresentada pela View mas é gerenciada pelo Controller.
+3. O Controller acessa o Model e geralmente provoca mudança no estado do modelo, assim como nos dados.
+4. A View usa o Model para apresentar os dados solicitados pelo usuário, sem que o Model tenha conhecimento direto sobre a View.
+> O objetivo é separar como seu programa funciona do que é apresentado na tela e de como ele obtém os dados de entrada.
 
 
 
