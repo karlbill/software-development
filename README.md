@@ -3,13 +3,13 @@ Resumo do livro Software Development, Design and Coding, de John F. Dooley.
 
 ## Princípios de Design
 Dividiremos os problemas de software em duas camadas distintas:
-  - Problemas maldosos (camada superior): surgem de domínios fora da ciência da computação e tendem a ser problemas em aberto, não bem-definidos. Requerem muito trabalho.
+  - Problemas perversos (camada superior): surgem de domínios fora da ciência da computação e tendem a ser problemas em aberto, não bem-definidos. Requerem muito trabalho.
   > Não é compreendido até a criação de uma solução </br>
   > Não há uma regra que diga que a solução final foi encontrada: não é um problema de certo ou errado mas, sim, melhor ou pior. </br>
   > É essencialmente inusitado e único </br>
   > Toda solução é uma operação de um único tiro </br>
   
-Obs: Processamento de palavras é o problema maldoso mais óbvio que existe: você pode pensar que um processador de palavras precisa apenas inserir, cortar e colar texto, manipular parágrafos e imprimir o texto. Assim que você termina seu processador e libera a versão, você é inundado com novas requisições de features como checagem de caracteres, notas de rodapé, múltiplas colunas, suporte para diferentes fontes, cores e estilos etc. Isso nunca tem fim.
+Obs: Processamento de palavras é o problema perverso mais óbvio que existe: você pode pensar que um processador de palavras precisa apenas inserir, cortar e colar texto, manipular parágrafos e imprimir o texto. Assim que você termina seu processador e libera a versão, você é inundado com novas requisições de features como checagem de caracteres, notas de rodapé, múltiplas colunas, suporte para diferentes fontes, cores e estilos etc. Isso nunca tem fim.
   
 A maioria das pessoas irá seguir uma solução linear para resolver esse tipo de problema, trabalhando de maneira Top-Down do problema à solução.
 ![image](https://user-images.githubusercontent.com/39681960/201549579-6c8162ba-5ad9-44ba-993d-7734906e7cee.png)
@@ -17,9 +17,9 @@ A maioria das pessoas irá seguir uma solução linear para resolver esse tipo d
 Verdadeiros solucionadores de problemas dessa natureza tendem a usar uma abordagem que varia da análise de requisitos ao modelo de solução, iterando entre estes até obter uma solução boa o suficiente.
 ![image](https://user-images.githubusercontent.com/39681960/201549665-6efe4b9c-0d1e-4306-8003-51dfd727d832.png)
 
-Outro problema maldoso é o de desenvolvimento de uma aplicação web: o cliente não tem ideia de como gostaria que a página web fosse. Desse modo, qualquer que seja sua primeira apresentação, não será precisamente o que ele quer. O problema não estará completamente compreendido até que você o tenha concluído. À medida que seus protótipos são construídos, mais features serão solicitadas - então, o problema não tem regra de parada, não há resposta certa. Há apenas a resposta "boa o suficiente". 
+Outro problema perverso é o de desenvolvimento de uma aplicação web: o cliente não tem ideia de como gostaria que a página web fosse. Desse modo, qualquer que seja sua primeira apresentação, não será precisamente o que ele quer. O problema não estará completamente compreendido até que você o tenha concluído. À medida que seus protótipos são construídos, mais features serão solicitadas - então, o problema não tem regra de parada, não há resposta certa. Há apenas a resposta "boa o suficiente". 
 
-  - Problemas domesticados (camada inferior): claramente definidos. Problemas que dão a sustentação em termos de Estrutura de Dados e Algoritmos para os problemas maldosos de outros domínios.
+  - Problemas domesticados (camada inferior): claramente definidos. Problemas que dão a sustentação em termos de Estrutura de Dados e Algoritmos para os problemas perversos de outros domínios.
     - Características:
     1. Formulação bem-definida e estável
     2. Um ponto de parada definido
@@ -39,7 +39,7 @@ Outro problema maldoso é o de desenvolvimento de uma aplicação web: o cliente
 ### O processo de Design
 Pode parecer uma bagunça, visto que é dinâmico e mudará à medida que for evoluindo e seu conhecimento sobre o projeto for aumentando.
 Projetos são limitados por tempo, então você deve saber quais requisitos priorizar e ter a habilidade de negociar com o cliente (trade-off).
-Projeto é heurística. Essas heurísticas e padrões dão ao bom designer maior rapidez em atingir o coração de um Wicked problem.
+Projeto é heurística. Essas heurísticas e padrões dão ao bom designer maior rapidez em atingir o coração de um problema perverso.
 Design evolui: para qualquer tipo de problema, os requisitos irão mudar com o passar do tempo. A sacada é criar uma arquitetura de software que comporte as mudanças vindouras.
     
 Características desejáveis de Desing:
